@@ -3,33 +3,198 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Day Genius — Support</title>
+
+<title>Day Genius — name the weekday of any date in your head</title>
+<meta name="description" content="Day Genius teaches you to name the weekday of any date in your head — eight steps, timed drills, two games. Free on the App Store. Support and FAQ here.">
+<link rel="canonical" href="https://daygenius.app/">
+
+<!-- Safari-only install banner: iOS, iPadOS and macOS Safari. Renders nothing elsewhere. -->
+<meta name="apple-itunes-app" content="app-id=6801888644">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Day Genius">
+<meta property="og:title" content="Day Genius — name the weekday of any date in your head">
+<meta property="og:description" content="Learn the mental method for any date back to year 1, including the 1752 calendar change. Eight steps, timed drills, two games. Free to start.">
+<meta property="og:url" content="https://daygenius.app/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://daygenius.app/img/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Day Genius — name the weekday of any date in your head.">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "@id": "https://daygenius.app/#app",
+  "name": "Day Genius",
+  "url": "https://daygenius.app/",
+  "downloadUrl": "https://apps.apple.com/us/app/day-genius/id6801888644",
+  "installUrl": "https://apps.apple.com/us/app/day-genius/id6801888644",
+  "sameAs": "https://apps.apple.com/us/app/day-genius/id6801888644",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "iOS 26.0 or later; iPadOS 26.0 or later",
+  "inLanguage": "en",
+  "description": "Day Genius teaches the mental method for naming the weekday of any calendar date: eight lesson steps, each with a timed drill, plus two games. Handles dates back to year 1, including the Julian to Gregorian change of 1752. Free to download, with the first four steps free; a single one-time in-app purchase unlocks the rest.",
+  "featureList": [
+    "Eight lesson steps, each gated behind a timed drill at 90 percent",
+    "Year flashcards",
+    "Speed Round and Date Drop games",
+    "Dates back to year 1, with historical Julian and Gregorian rules",
+    "No account, no ads, no data collection"
+  ],
+  "author": { "@id": "https://daygenius.app/#craig" },
+  "publisher": { "@id": "https://daygenius.app/#craig" },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://apps.apple.com/us/app/day-genius/id6801888644"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://daygenius.app/#craig",
+  "name": "Craig Ricks",
+  "url": "https://craigricks.com/"
+}
+</script>
+
 <style>
-  :root { color-scheme: light dark; --fg:#1c1c1e; --muted:#6b6b70; --bg:#fbfbfd; --card:#fff; --line:#e5e5ea; --accent:#4f46e5; }
+  :root { color-scheme: light dark; --fg:#1c1c1e; --muted:#6b6b70; --bg:#fbfbfd; --card:#fff; --line:#e5e5ea; --accent:#4f46e5; --shot-edge:#e5e5ea; }
   @media (prefers-color-scheme: dark) {
-    :root { --fg:#f2f2f7; --muted:#a1a1a6; --bg:#0b0b0f; --card:#17171c; --line:#2c2c31; --accent:#8b85ff; }
+    :root { --fg:#f2f2f7; --muted:#a1a1a6; --bg:#0b0b0f; --card:#17171c; --line:#2c2c31; --accent:#8b85ff; --shot-edge:#2c2c31; }
   }
   * { box-sizing: border-box; }
   body { margin:0; padding:2.5rem 1.25rem 4rem; background:var(--bg); color:var(--fg);
          font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
   main { max-width: 46rem; margin: 0 auto; }
-  h1 { font-size: 2rem; letter-spacing:-.02em; margin:0 0 .35rem; }
-  .tagline { color:var(--muted); font-size:1.05rem; margin:0 0 2rem; }
-  h2 { font-size: 1.15rem; margin: 2.25rem 0 .75rem; }
+  h1 { font-size: 2.4rem; letter-spacing:-.025em; margin:0 0 .4rem; line-height:1.15; }
+  h1 .g { color:var(--accent); }
+  .tagline { color:var(--fg); font-size:1.25rem; margin:0 0 .5rem; letter-spacing:-.01em; }
+  .sub { color:var(--muted); margin:0 0 1.5rem; }
+  h2 { font-size: 1.15rem; margin: 2.5rem 0 .75rem; letter-spacing:-.01em; }
+  h3 { font-size: 1rem; }
   .card { background:var(--card); border:1px solid var(--line); border-radius:14px;
           padding:1.1rem 1.25rem; margin:1rem 0; }
-  .card h3 { margin:0 0 .35rem; font-size:1rem; }
+  .card h3 { margin:0 0 .35rem; }
   .card p { margin:0; color:var(--muted); }
   .contact { background:var(--card); border:1px solid var(--line); border-radius:14px;
              padding:1.25rem; text-align:center; margin:1.5rem 0; }
   a { color:var(--accent); }
+
+  /* Store link. Deliberately not Apple's badge artwork — see the note in
+     AppStore/listing.md; using the badge requires accepting Apple's licence. */
+  .get { display:inline-block; background:var(--accent); color:#fff; text-decoration:none;
+         font-weight:600; font-size:1.02rem; padding:.85rem 1.5rem; border-radius:12px;
+         margin:.25rem 0 .4rem; }
+  .get:hover { filter:brightness(1.08); }
+  .price-note { color:var(--muted); font-size:.9rem; margin:.1rem 0 0; }
+
+  .shots { display:flex; gap:1rem; overflow-x:auto; padding:.5rem 0 1rem;
+           scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; }
+  .shots figure { margin:0; flex:0 0 auto; width:230px; scroll-snap-align:start; }
+  .shots img { width:230px; height:auto; display:block; border-radius:18px;
+               border:1px solid var(--shot-edge); background:var(--card); }
+  .shots figcaption { color:var(--muted); font-size:.85rem; margin-top:.5rem; }
+
+  .steps { margin:0; padding-left:1.15rem; color:var(--muted); }
+  .steps li { margin:.3rem 0; }
+  .steps b { color:var(--fg); font-weight:600; }
+
   footer { margin-top:3rem; padding-top:1.25rem; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem; }
+  footer p { margin:.5rem 0 0; font-size:.82rem; }
 </style>
 </head>
 <body>
 <main>
-  <h1>Day Genius</h1>
+
+  <h1>Day <span class="g">Genius</span></h1>
   <p class="tagline">Name the weekday of any date, in your head.</p>
+  <p class="sub">Someone mentions a date and you answer. No calendar, no phone, no pause.
+  It looks like a party trick. It’s a method, and this teaches it.</p>
+
+  <a class="get" href="https://apps.apple.com/us/app/day-genius/id6801888644">Get Day Genius on the App&nbsp;Store</a>
+  <p class="price-note">Free to download. The first four steps are free; one payment of
+  $3.99 in the US unlocks the rest — not a subscription. Requires iOS 26.</p>
+
+  <h2>What you learn</h2>
+  <p>Every month has a code. Add that code, the day of the month, and a code for the year,
+  then take the remainder after dividing by seven. That number is the weekday — addition
+  and one division you can finish while someone is still asking the question.</p>
+
+  <ol class="steps">
+    <li><b>Day numbers</b> — 0 = Sunday through 6 = Saturday</li>
+    <li><b>Take out the sevens</b> — collapsing any total into a weekday number</li>
+    <li><b>Month codes</b> — twelve values, each with a memory hook</li>
+    <li><b>Combine</b> — your first real weekday</li>
+    <li><b>Year code</b> — turn any year into its code</li>
+    <li><b>Leap-year rule</b></li>
+    <li><b>Century adjustment</b> — any century, not just this one</li>
+    <li><b>Full date</b> — everything together, at speed</li>
+  </ol>
+
+  <h2>Inside the app</h2>
+  <div class="shots">
+    <figure>
+      <picture>
+        <source srcset="img/01-learn.avif" type="image/avif">
+        <img src="img/01-learn.jpg" width="560" height="1217" loading="lazy" decoding="async"
+             alt="The Learn tab, listing the eight steps with later ones locked until the one before is mastered.">
+      </picture>
+      <figcaption>Eight steps, each opening as you master the last.</figcaption>
+    </figure>
+    <figure>
+      <picture>
+        <source srcset="img/06-drill.avif" type="image/avif">
+        <img src="img/06-drill.jpg" width="560" height="1217" loading="lazy" decoding="async"
+             alt="A timed drill asking which number corresponds to a weekday, with seven answer buttons.">
+      </picture>
+      <figcaption>A timed drill after every step.</figcaption>
+    </figure>
+    <figure>
+      <picture>
+        <source srcset="img/02-reference.avif" type="image/avif">
+        <img src="img/02-reference.jpg" width="560" height="1217" loading="lazy" decoding="async"
+             alt="The Reference tab, showing a date picker that names the weekday and shows the worked calculation.">
+      </picture>
+      <figcaption>Check any date, and see the working.</figcaption>
+    </figure>
+    <figure>
+      <picture>
+        <source srcset="img/04-play.avif" type="image/avif">
+        <img src="img/04-play.jpg" width="560" height="1217" loading="lazy" decoding="async"
+             alt="Date Drop, a game where dates fall from the top of the screen into weekday buckets.">
+      </picture>
+      <figcaption>Date Drop, for practice that doesn’t feel like practice.</figcaption>
+    </figure>
+    <figure>
+      <picture>
+        <source srcset="img/03-progress.avif" type="image/avif">
+        <img src="img/03-progress.jpg" width="560" height="1217" loading="lazy" decoding="async"
+             alt="The Progress tab, showing mastery of each step, a practice streak and a per-skill breakdown.">
+      </picture>
+      <figcaption>It tracks what you personally get wrong.</figcaption>
+    </figure>
+  </div>
+
+  <h2>Correct back to year 1</h2>
+  <p>Most calendar apps project today’s rules backwards. Day Genius uses the calendar people
+  actually had: Britain and its colonies skipped 3–13 September 1752, and before that every
+  fourth year was a leap year with no century exception. The engine is cross-checked against
+  an independent algorithm across thousands of dates.</p>
+
+  <h2>No account, no ads, no data</h2>
+  <p>There is no sign-up and no server of ours for anything to go to. Your learning stays on
+  your device. The only thing the app talks to is Apple, and only to check a purchase — see
+  the <a href="privacy.html">privacy policy</a>.</p>
+
+  <h2 id="support">Support</h2>
 
   <div class="contact">
     <strong>Need help?</strong><br>
@@ -37,12 +202,10 @@
     <span style="color:var(--muted);font-size:.9rem">One person answers these, usually within a couple of days.</span>
   </div>
 
-  <h2>Common questions</h2>
-
   <div class="card">
     <h3>I paid before and reinstalled. How do I get it back?</h3>
     <p>Open the <strong>Progress</strong> tab, find the <strong>Full method</strong> card,
-    tap <em>See what's included</em>, then <strong>Restore purchase</strong>. It is free
+    tap <em>See what’s included</em>, then <strong>Restore purchase</strong>. It is free
     and works on any device signed in to the same Apple Account.</p>
   </div>
 
@@ -52,18 +215,18 @@
     skipped 3–13 September 1752 when they switched from the Julian to the Gregorian
     calendar, and before that every fourth year was a leap year with no century
     exception. Day Genius applies those historical rules; most calendar apps project
-    today's rules backwards instead. See <em>Reference &rsaquo; Before 1752</em> in the app.</p>
+    today’s rules backwards instead. See <em>Reference &rsaquo; Before 1752</em> in the app.</p>
   </div>
 
   <div class="card">
-    <h3>Why won't the date picker let me choose 7 September 1752?</h3>
+    <h3>Why won’t the date picker let me choose 7 September 1752?</h3>
     <p>That day never happened. Those eleven days were removed from the calendar, so
     the picker skips them rather than offering a date that did not exist.</p>
   </div>
 
   <div class="card">
     <h3>What does it take to master a step?</h3>
-    <p>Three drills at 90% or better. The count is shown on the step's own button, so
+    <p>Three drills at 90% or better. The count is shown on the step’s own button, so
     you can always see how many remain.</p>
   </div>
 
@@ -90,7 +253,11 @@
   </div>
 
   <footer>
-    <a href="privacy.html">Privacy Policy</a> · Day Genius
+    <a href="privacy.html">Privacy Policy</a> ·
+    <a href="mailto:craig@ten987.com">Support</a> ·
+    <a href="https://apps.apple.com/us/app/day-genius/id6801888644">App Store</a>
+    <p>Day Genius is made by Craig Ricks. Apple and App Store are trademarks of Apple Inc.,
+    registered in the U.S. and other countries and regions.</p>
   </footer>
 </main>
 </body>
